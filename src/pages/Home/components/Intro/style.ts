@@ -1,8 +1,17 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   display: flex;
+  height: 34rem;
   gap: 3.375rem;
+`
+
+export const ColLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4.125rem;
 `
 
 export const Title = styled.h1`
@@ -17,12 +26,11 @@ export const Title = styled.h1`
 export const Subtitle = styled.h3`
   font-size: 1.25rem;
   color: ${(props) => props.theme['base-subtitle']};
-  margin-bottom: 4.125rem;
 `
 
 export const BoxQualities = styled.div`
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 3fr 4fr;
   grid-gap: 20px 40px;
 
   p {

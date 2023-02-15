@@ -2,6 +2,7 @@ import { ShoppingCart, Package, Timer, Coffee } from 'phosphor-react'
 import CoffeCup from '../../../../assets/coffee_cup.svg'
 import {
   BoxQualities,
+  ColLeft,
   IconGray,
   IconPurple,
   IconYellow,
@@ -14,7 +15,7 @@ import {
 export function Intro() {
   return (
     <Wrapper>
-      <div>
+      <ColLeft>
         <div>
           <Title>Encontre o café perfeito para qualquer hora do dia</Title>
           <Subtitle>
@@ -48,7 +49,7 @@ export function Intro() {
             O café chega fresquinho até você
           </p>
         </BoxQualities>
-      </div>
+      </ColLeft>
       <img src={CoffeCup} alt="Copo de café com grãos de café em volta" />
     </Wrapper>
   )
