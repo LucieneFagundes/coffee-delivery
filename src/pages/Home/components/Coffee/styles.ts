@@ -1,19 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Wrapper = styled.main`
-  display: flex;
-  flex-direction: column;
-  gap: 3.375rem;
-
-  h2 {
-    font-family: 'Baloo 2', sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    line-height: 130%;
-  }
-`
-
-export const Menu = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -38,29 +25,35 @@ export const CoffeeCard = styled.div`
   border-top-left-radius: 6px;
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 36px;
-
-  img {
-    width: 7.5rem;
-    height: 7.5rem;
-
-    margin-top: -40px;
-  }
 `
 
-export const Tag = styled.p`
-  font-size: 0.675rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 4px 8px;
-  border-radius: 100px;
+export const CoffeeImage = styled.img`
+  width: 7.5rem;
+  height: 7.5rem;
 
-  color: ${(props) => props.theme['yellow-dark']};
-  background: ${(props) => props.theme['yellow-light']};
+  margin-top: -40px;
+`
+
+export const Tag = styled.div`
+  display: flex;
+  gap: 0.25rem;
+
+  p {
+    font-size: 0.675rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 100px;
+
+    color: ${(props) => props.theme['yellow-dark']};
+    background: ${(props) => props.theme['yellow-light']};
+  }
 `
 export const CoffeeName = styled.p`
   font-family: 'Baloo 2', sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
+  text-transform: capitalize;
 `
 
 export const Description = styled.p`
@@ -70,9 +63,11 @@ export const Description = styled.p`
 `
 
 export const ControlBuy = styled.div`
+  width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: 20px;
-  gap: 22px;
 `
 
 export const Price = styled.p`
@@ -85,6 +80,10 @@ export const Price = styled.p`
     font-weight: 800;
     margin-left: 4px;
   }
+`
+export const BoxInput = styled.div`
+  display: flex;
+  gap: 0.5rem;
 `
 
 export const AmountCoffee = styled.input`
@@ -102,4 +101,8 @@ export const Button = styled.button`
   padding: 0 0.5rem;
   border: none;
   border-radius: 6px;
+
+  &:hover {
+    background-color: ${(props) => props.theme['purple']};
+  }
 `

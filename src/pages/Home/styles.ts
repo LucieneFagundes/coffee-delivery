@@ -5,4 +5,24 @@ export const HomeContainer = styled.main`
   flex-direction: column;
 `
 
+export const MenuCoffee = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3.375rem;
+
+  h2 {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 130%;
+  }
+`
+
+export const CoffeeList = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 2.5rem;
+`
 
