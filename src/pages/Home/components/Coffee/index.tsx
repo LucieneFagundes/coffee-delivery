@@ -1,4 +1,5 @@
 import { ShoppingCartSimple } from 'phosphor-react'
+import { InputNumber } from '../../../../components/InputNumber'
 import {
   CoffeeCard,
   CoffeeName,
@@ -44,7 +45,7 @@ export function Coffee({ coffee }: CoffeeProps) {
           R$<span>{coffee.price}</span>
         </Price>
         <BoxInput>
-          <AmountCoffee type="number" defaultValue={1} min="1" />
+          <InputNumber id="amount-coffee" min={0} max={99} />
           <Button>
             <ShoppingCartSimple size={22} weight="fill" />
           </Button>
