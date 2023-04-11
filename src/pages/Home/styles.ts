@@ -24,5 +24,14 @@ export const CoffeeList = styled.div`
   flex-wrap: wrap;
   column-gap: 2rem;
   row-gap: 2.5rem;
-`
 
+  @media (max-width: 768px) {
+    column-gap: 1rem;
+  }
+
+  @media (max-width: 380px){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`

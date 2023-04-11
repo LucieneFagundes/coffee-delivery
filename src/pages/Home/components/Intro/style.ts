@@ -2,8 +2,13 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   display: flex;
-  height: 34rem;
+  margin: 5.75rem 0;
   gap: 3.375rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin: 2.875rem 0;
+  }
 `
 
 export const ColLeft = styled.div`
@@ -12,6 +17,22 @@ export const ColLeft = styled.div`
   align-items: center;
   justify-content: center;
   gap: 4.125rem;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`
+export const ColRight = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+  @media (max-width: 430px) {
+    img {
+      width: 80%;
+    }
+  }
 `
 
 export const Title = styled.h1`
@@ -40,6 +61,10 @@ export const BoxQualities = styled.div`
 
     color: ${(props) => props.theme['base-text']};
     line-height: 130%;
+  }
+
+  @media (max-width: 430px) {
+    grid-template-columns: 1fr;
   }
 `
 const BaseIcon = styled.span`

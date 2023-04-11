@@ -3,6 +3,7 @@ import CoffeCup from '../../../../assets/coffee_cup.svg'
 import {
   BoxQualities,
   ColLeft,
+  ColRight,
   IconGray,
   IconPurple,
   IconYellow,
@@ -50,7 +51,9 @@ export function Intro() {
           </p>
         </BoxQualities>
       </ColLeft>
-      <img src={CoffeCup} alt="Copo de café com grãos de café em volta" />
+      <ColRight>
+        <img src={CoffeCup} alt="Copo de café com grãos de café em volta" />
+      </ColRight>
     </Wrapper>
   )
 }

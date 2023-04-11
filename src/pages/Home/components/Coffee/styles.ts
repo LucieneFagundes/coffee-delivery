@@ -1,15 +1,5 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.main`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  column-gap: 32px;
-  row-gap: 40px;
-
-  margin-bottom: 20px;
-`
-
 export const CoffeeCard = styled.div`
   width: 16rem;
   height: 19.375rem;
@@ -25,6 +15,14 @@ export const CoffeeCard = styled.div`
   border-top-left-radius: 6px;
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 36px;
+
+  @media (max-width: 770px) {
+    width: 15rem;
+    padding: .75rem;
+  }
+  @media (max-width: 640px) {
+    width: 14rem;
+  }
 `
 
 export const CoffeeImage = styled.img`
