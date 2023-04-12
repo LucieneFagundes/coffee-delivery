@@ -30,6 +30,8 @@ export function Coffee({ coffee }: CoffeeProps) {
   let arrayTags = coffee.tag
   let tags = arrayTags.flatMap((tag) => tag.split(','))
 
+  let myPriceFormat = coffee.price.toFixed(2)
+
   return (
     <CoffeeCard>
       <CoffeeImage src={coffee.image} alt={coffee.name} />
@@ -42,7 +44,8 @@ export function Coffee({ coffee }: CoffeeProps) {
       <Description>{coffee.description}</Description>
       <ControlBuy>
         <Price>
-          R$<span>{coffee.price}</span>
+          R$
+          <span>{myPriceFormat}</span>
         </Price>
         <BoxInput>
           <InputNumber id="amount-coffee" min={0} max={99} />

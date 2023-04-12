@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
-import { getCoffee } from '../../api/axios'
+import { useState } from 'react'
 import { Coffee } from './components/Coffee'
 import { Intro } from './components/Intro'
 import { CoffeeList, HomeContainer, MenuCoffee } from './styles'
+import products from '../../../db.json'
 
 interface CoffeeType {
   id: number
@@ -14,16 +14,8 @@ interface CoffeeType {
 }
 
 export function Home() {
-  const [coffee, setCoffee] = useState<CoffeeType[]>([])
+  const [coffee, setCoffee] = useState<CoffeeType[]>(products)
 
-  async function returnAllCoffees() {
-    var data = await getCoffee()
-    setCoffee(data)
-  }
-
-  useEffect(() => {
-    returnAllCoffees()
-  }, [])
   return (
     <>
       <HomeContainer>
