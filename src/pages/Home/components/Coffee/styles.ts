@@ -84,15 +84,6 @@ export const BoxInput = styled.div`
   gap: 0.5rem;
 `
 
-export const AmountCoffee = styled.input`
-  width: 4.5rem;
-  border: none;
-  border-radius: 6px;
-  text-align: center;
-  color: ${(props) => props.theme['base-title']};
-  background-color: ${(props) => props.theme['base-button']};
-`
-
 export const Button = styled.button`
   color: ${(props) => props.theme['base-button']};
   background-color: ${(props) => props.theme['purple-dark']};

@@ -6,7 +6,6 @@ import {
   Description,
   ControlBuy,
   Price,
-  AmountCoffee,
   Button,
   Tag,
   CoffeeImage,
@@ -30,7 +29,9 @@ export function Coffee({ coffee }: CoffeeProps) {
   let arrayTags = coffee.tag
   let tags = arrayTags.flatMap((tag) => tag.split(','))
 
-  let myPriceFormat = coffee.price.toFixed(2)
+  let myPriceFormat = coffee.price.toLocaleString('pt-BR', {
+    minimumFractionDigits: 2,
+  })
 
   return (
     <CoffeeCard>
