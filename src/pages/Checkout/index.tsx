@@ -1,7 +1,9 @@
 import { CurrencyDollar, MapPinLine } from 'phosphor-react'
 import {
+  AddressForm,
   BoxHeader,
   CheckoutContainer,
+  Input,
   OrderBox,
   OrderContainer,
   SmallText,
@@ -24,15 +26,27 @@ export function Checkout() {
             </div>
             <br />
           </BoxHeader>
-          <form>
-            <input type="number" placeholder="CEP" />
-            <input type="text" placeholder="Rua" />
-            <input type="text" placeholder="Número" />
-            <input type="text" placeholder="Complemento" />
-            <input type="text" placeholder="Bairro" />
-            <input type="text" placeholder="Cidade" />
-            <input type="text" placeholder="UF" />
-          </form>
+          <AddressForm>
+            <Input type="number" placeholder="CEP" style={{ width: '35%' }} />
+            <Input type="text" placeholder="Rua" />
+            <div style={{ display: 'flex', gap: '12px', }}>
+              <Input
+                type="text"
+                placeholder="Número"
+                style={{ width: '35%'}}
+              />
+              <Input type="text" placeholder="Complemento" style={{ flex: 2 }} />
+            </div>
+            <div style={{ display: 'flex', gap: '12px' , justifyContent: 'flex-start' }}>
+              <Input
+                type="text"
+                placeholder="Bairro"
+                style={{ width: '35%' }}
+              />
+              <Input type="text" placeholder="Cidade" style={{flex: 2}} />
+              <Input type="text" placeholder="UF" style={{width: '10%'}} />
+            </div>
+          </AddressForm>
         </OrderBox>
         <OrderBox>
           <BoxHeader>

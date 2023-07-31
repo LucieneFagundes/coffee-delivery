@@ -18,7 +18,7 @@ export const OrderBox = styled.div`
   row-gap: 2rem;
 
   border-radius: 6;
-  background-color: ${(props) => props.theme['base-input']};
+  background-color: ${(props) => props.theme['base-card']};
 `
 
 
@@ -38,6 +38,19 @@ export const BoxHeader = styled.div`
   #first {
     color: ${props => props.theme['yellow-dark']};
   }
+`
+export const AddressForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+`
+
+export const Input = styled.input`
+  padding: .75rem;
+  background-color: ${(props) => props.theme['base-input']};
+  border: 1px solid ${(props) => props.theme['base-button']};
+  font-size: .875rem;
 `
 
 
