@@ -6,9 +6,9 @@ export const CheckoutContainer = styled.div`
   gap: 1.875rem;
 `
 export const OrderContainer = styled.div`
-display: flex;
-flex-direction: column;
-gap: .75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 `
 
 export const OrderBox = styled.div`
@@ -21,39 +21,68 @@ export const OrderBox = styled.div`
   background-color: ${(props) => props.theme['base-card']};
 `
 
-
-export const BoxHeader = styled.div`
+export const HeaderBox = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
 
-  div{
-    gap: .125rem;
+  div {
+    gap: 0.125rem;
   }
 
   svg {
-    color: ${props => props.theme['purple']};
+    color: ${(props) => props.theme['purple']};
   }
 
   #first {
-    color: ${props => props.theme['yellow-dark']};
+    color: ${(props) => props.theme['yellow-dark']};
   }
 `
 export const AddressForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
 `
 
 export const Input = styled.input`
-  padding: .75rem;
+  padding: 0.75rem;
   background-color: ${(props) => props.theme['base-input']};
   border: 1px solid ${(props) => props.theme['base-button']};
-  font-size: .875rem;
+  font-size: 0.875rem;
+`
+export const AlignButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
 `
 
+export const Button = styled.button`
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.75rem;
 
+  background-color: ${(props) => props.theme['base-button']};
+  border: 1px solid ${(props) => props.theme['base-button']};
+  border-radius: 6;
+
+  text-transform: uppercase;
+  font-size: 0.75rem;
+
+  cursor: pointer;
+
+  :hover {
+    background-color: ${(props) => props.theme['purple-light']};
+    border: 1px solid ${(props) => props.theme['purple']};
+  }
+
+  svg {
+    color: ${(props) => props.theme['purple']};
+    font-size: 1rem;
+  }
+`
 
 // Text formatting
 export const Title = styled.h3`
@@ -64,6 +93,5 @@ export const Title = styled.h3`
 `
 
 export const SmallText = styled.p`
-  font-size: .875rem;
-
+  font-size: 0.875rem;
 `
