@@ -17,7 +17,7 @@ export const OrderBox = styled.div`
   padding: 2.5rem;
   row-gap: 2rem;
 
-  border-radius: 6;
+  border-radius: 0.375rem;
   background-color: ${(props) => props.theme['base-card']};
 `
 
@@ -66,7 +66,7 @@ export const Button = styled.button`
 
   background-color: ${(props) => props.theme['base-button']};
   border: 1px solid ${(props) => props.theme['base-button']};
-  border-radius: 6;
+  border-radius: 0.375rem;
 
   text-transform: uppercase;
   font-size: 0.75rem;

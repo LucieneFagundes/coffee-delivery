@@ -5,17 +5,18 @@ import {
   MapPinLine,
   Money,
 } from 'phosphor-react'
+import { Order } from '../../components/Order'
 import {
   AddressForm,
   AlignButtons,
-  HeaderBox,
   Button,
   CheckoutContainer,
+  HeaderBox,
   Input,
   OrderBox,
   OrderContainer,
   SmallText,
-  Title,
+  Title
 } from './styles'
 
 export function Checkout() {
@@ -93,9 +94,7 @@ export function Checkout() {
           </AlignButtons>
         </OrderBox>
       </OrderContainer>
-      <div>
-        <Title>Cafés selecionados</Title>
-      </div>
+      <Order />
     </CheckoutContainer>
   )
 }
