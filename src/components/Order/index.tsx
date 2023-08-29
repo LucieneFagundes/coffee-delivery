@@ -4,11 +4,15 @@ import {
   OrderContainer,
   Total,
   Title,
-  Itens,
+  Item,
   ItemInteraction,
+  ItemLabel,
+  ItemInfo,
+  RemoveButton,
 } from './styles'
 import coffee from '../../assets/coffee/arabe.png'
 import { InputNumber } from '../InputNumber'
+import { Trash } from 'phosphor-react'
 
 export function Order() {
   return (
@@ -16,17 +20,22 @@ export function Order() {
       <OrderContainer>
         <Title>Cafés selecionados</Title>
         <OrderBox>
-          <Itens>
+          <Item>
             <img src={coffee} />
-            <ItemInteraction>
-              Café Árabe
-              <span>
+            <ItemInfo>
+              <ItemLabel>
+                <span>Café Árabe</span>
+                <span>R$ 9,90</span>
+              </ItemLabel>
+              <ItemInteraction>
                 <InputNumber />
-                Remover
-              </span>
-            </ItemInteraction>
-            <span>R$ 9,90</span>
-          </Itens>
+                <RemoveButton>
+                  <Trash />
+                  Remover
+                </RemoveButton>
+              </ItemInteraction>
+            </ItemInfo>
+          </Item>
           <Total>
             <p>
               Total de itens
