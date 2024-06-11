@@ -1,5 +1,6 @@
 import { ShoppingCart, Package, Timer, Coffee } from 'phosphor-react'
 import CoffeCup from '../../../../assets/coffee_cup.svg'
+import backgroundImg from '../../../../assets/backgroundImg.png'
 import {
   BoxQualities,
   ColLeft,
@@ -15,7 +16,7 @@ import {
 
 export function Intro() {
   return (
-    <Wrapper>
+    <Wrapper backgroundImg={backgroundImg}>
       <ColLeft>
         <div>
           <Title>Encontre o café perfeito para qualquer hora do dia</Title>

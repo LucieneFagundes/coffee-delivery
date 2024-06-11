@@ -1,9 +1,29 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+type Props = {
+  backgroundImg: string
+}
+
+export const Wrapper = styled.div<Props>`
+  position: relative;
   display: flex;
   margin: 5.75rem 0;
   gap: 3.375rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(${(props) => props.backgroundImg});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(40px);
+    z-index: -1;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
