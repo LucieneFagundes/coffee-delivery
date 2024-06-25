@@ -1,14 +1,10 @@
-import { ShoppingCart, Package, Timer, Coffee } from 'phosphor-react'
-import CoffeCup from '../../../../assets/coffee_cup.svg'
 import backgroundImg from '../../../../assets/backgroundImg.png'
+import CoffeCup from '../../../../assets/coffee_cup.svg'
+import { Icon } from '../../../../components/Icon'
 import {
   BoxQualities,
   ColLeft,
   ColRight,
-  IconGray,
-  IconPurple,
-  IconYellow,
-  IconYellowDark,
   Subtitle,
   Title,
   Wrapper,
@@ -27,28 +23,20 @@ export function Intro() {
         </div>
         <BoxQualities>
           <p>
-            <IconYellowDark>
-              <ShoppingCart size={16} weight="fill" />
-            </IconYellowDark>
+            <Icon variant="shoppingCart" color="yellow-dark" weight="fill" />
             Compra simples e segura
           </p>
           <p>
-            <IconGray>
-              <Package size={16} weight="fill" />
-            </IconGray>
+            <Icon variant="package" color="base-text" weight="fill" />
             Embalagem mantém o café intacto
           </p>
           <p>
-            <IconYellow>
-              <Timer size={16} weight="fill" />
-            </IconYellow>
+            <Icon variant="timer" color="yellow" weight="fill" />
             Entrega rápida e rastreada
           </p>
           <p>
-            <IconPurple>
-              <Coffee size={16} weight="fill" />
-            </IconPurple>
-            O café chega fresquinho até você
+            <Icon variant="coffee" color="purple" weight="fill" />O café chega
+            fresquinho até você
           </p>
         </BoxQualities>
       </ColLeft>

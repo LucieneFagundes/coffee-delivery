@@ -87,23 +87,3 @@ export const BoxQualities = styled.div`
     grid-template-columns: 1fr;
   }
 `
-const BaseIcon = styled.span`
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  border-radius: 999px;
-  color: ${(props) => props.theme.white};
-`
-
-export const IconYellowDark = styled(BaseIcon)`
-  background: ${(props) => props.theme['yellow-dark']};
-`
-export const IconGray = styled(BaseIcon)`
-  background: ${(props) => props.theme['base-text']};
-`
-export const IconYellow = styled(BaseIcon)`
-  background: ${(props) => props.theme['yellow']};
-`
-export const IconPurple = styled(BaseIcon)`
-  background: ${(props) => props.theme['purple']};
-`
