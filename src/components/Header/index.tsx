@@ -7,9 +7,13 @@ import {
   NavButtons,
 } from './styles'
 import { NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 export function Header() {
+  const { coffee } = useContext(CoffeeContext)
   //TODO : Estilizar o ButtonCart para quando houver item no carrinho
+  const count = coffee.reduce((acc, item) => acc + item.quantity, 0)
 
   return (
     <HeaderContainer>
@@ -25,6 +29,7 @@ export function Header() {
         <NavLink to="/checkout" title="checkout">
           <ButtonCart>
             <ShoppingCart size={22} weight="fill" />
+            {count > 0 && <span className="data-count">{count}</span>}
           </ButtonCart>
         </NavLink>
       </NavButtons>

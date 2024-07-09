@@ -30,4 +30,22 @@ export const ButtonLocalization = styled(BaseButton)`
 export const ButtonCart = styled(BaseButton)`
   background-color: ${(props) => props.theme['yellow-light']};
   color: ${(props) => props.theme['yellow-dark']};
+
+  position: relative;
+
+  .data-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: ${(props) => props.theme['yellow-dark']};
+    color: ${(props) => props.theme.white};
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
 `
