@@ -11,6 +11,9 @@ import {
   CoffeeImage,
   BoxInput,
 } from './styles'
+import { priceFormatter } from '../../../../utils/formatter'
+import { useContext } from 'react'
+import { CoffeeContext } from '../../../../contexts/CoffeeContext'
 
 interface Coffee {
   id: number
@@ -26,12 +29,26 @@ interface CoffeeProps {
 }
 
 export function Coffee({ coffee }: CoffeeProps) {
+  const { handleAddCoffee } = useContext(CoffeeContext)
+
   let arrayTags = coffee.tag
   let tags = arrayTags.flatMap((tag) => tag.split(','))
 
-  let myPriceFormat = coffee.price.toLocaleString('pt-BR', {
-    minimumFractionDigits: 2,
-  })
+  function handleCount() {
+    let amount = document.getElementById(
+      `amount-coffee-${coffee.id}`,
+    ) as HTMLInputElement
+    let value = Number(amount.value)
+
+    if (value === 0) return
+
+    const newCoffee = {
+      ...coffee,
+      quantity: value,
+    }
+
+    handleAddCoffee(newCoffee)
+  }
 
   return (
     <CoffeeCard>
@@ -46,11 +63,11 @@ export function Coffee({ coffee }: CoffeeProps) {
       <ControlBuy>
         <Price>
           R$
-          <span>{myPriceFormat}</span>
+          <span>{priceFormatter.format(coffee.price)}</span>
         </Price>
         <BoxInput>
-          <InputNumber id="amount-coffee" min={0} max={99} />
-          <Button>
+          <InputNumber id={`amount-coffee-${coffee.id}`} min={0} max={99} />
+          <Button onClick={handleCount}>
             <ShoppingCartSimple size={22} weight="fill" />
           </Button>
         </BoxInput>
